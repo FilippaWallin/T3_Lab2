@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 2rem 6rem;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-top: 4rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Mjuka övergångar vid hover */
+.a, .b div, .b img, .c img, .d, .d p {
+  transition: transform 0.4s;
+}
+
+/* a) På hovedet */
+.a {
+  width: 300px;
+  border: 1px solid red;
+  transform: rotate(180deg);
+}
+
+/* b) Två bilder: div:en skalas, bilden roteras */
+.b {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: left;
+  gap: 150px;
+  padding: 100px 0;
+}
+
+.b div {
+  width: 200px;
+  outline: 1px dashed red;
+}
+
+/* Liten: halv storlek, 45 grader runt vänster hörn */
+.b div:first-child {
+  transform: scale(0.5);
+}
+.b div:first-child img {
+  transform-origin: left bottom;
+  transform: rotate(45deg);
+}
+
+/* Stor: 1,5 gånger större, 90 grader runt höger hörn */
+.b div:last-child {
+  transform: scale(1.5);
+}
+.b div:last-child img {
+  transform-origin: right bottom;
+  transform: rotate(90deg);
+}
+
+/* c) Bild precis utanför ramen till höger */
+.c {
+  width: 300px;
+  border: 2px solid #999;
+}
+.c img {
+  transform: translateX(calc(100% + 2px));
+}
+
+/* d) Text: roterad, kanterna rättas med skew, texten rättas åt andra hållet */
+.d {
+  width: 300px;
+  padding: 1rem 2rem;
+  background-color: #674e10;
+  text-align: center;
+  transform: rotate(-10deg) skew(-10deg);
+  margin-bottom: 4rem;
+}
+.d p {
+  color: #f3e1b3;
+  transform: skew(10deg);
+}
+
+/* BONUS: effekterna annulleras när musen är över */
+.a:hover {
+  transform: none;
+}
+
+.b:hover div,
+.b:hover img {
+  transform: none;
+}
+
+.c:hover img {
+  transform: none;
+}
+
+.d:hover,
+.d:hover p {
+  transform: none;
+}
