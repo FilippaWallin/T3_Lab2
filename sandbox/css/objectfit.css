@@ -1,0 +1,36 @@
+* { 
+    box-sizing: border-box;
+}
+
+Section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    align-items: end;
+}
+
+
+div {
+    width: 100px;
+    aspect-ratio: 1/3;
+    border: 1px solid red;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.fyll {
+    object-fit: cover;
+}
+
+.hel {
+    object-fit: contain;
+}
+
+.centrerad {
+    object-fit: cover;
+    object-position: 75%;
+}
