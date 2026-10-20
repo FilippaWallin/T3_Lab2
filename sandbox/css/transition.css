@@ -1,3 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem 2rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    max-width: 700px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px dashed antiquewhite;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.lyft {
+  box-shadow: 0 4px 6px(0, 0, 0, 0.2);
+  transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
+.lyft:hover {
+  box-shadow: 0 16px 24px(0, 0, 0, 0.4);
+  transform: translateY(-15px);
+}
+
+.cirkel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: pink;
+  transition: background-color 0.6s ease;
+}
+.cirkel:hover {
+  background-color: purple;
+}
+
+.rotera {
+  transition: transform 0.6s ease;
+}
+.rotera:hover {
+  transform: rotate(90deg);
+}
+
+.filter {
+  transition: filter 0.6s ease;
+}
+.filter:hover {
+  filter: contrast(150%) blur(2px);
+}
+
 div {
     width: 200px;
     aspect-ratio: 1/1;
@@ -5,8 +71,8 @@ div {
     transition: transform 1s ease;
 }
 
-div.hoover {
-    transform: translateX(100%)
+div.hover {
+    transform: translateX(100%);
 }
 
 img:hover {
@@ -16,17 +82,10 @@ img:hover {
 img {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 2);
   transition: box-shadow 0.6s ease;
-
-} */
-
+} 
 
 img:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
   transform: translateY(-40px);
 }
 
-img {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 2);
-  transition: box-shadow 0.6s ease;
-
-}
