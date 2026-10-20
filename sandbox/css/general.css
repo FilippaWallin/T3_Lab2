@@ -3,15 +3,38 @@
 }
 
 body {
+    margin: 0;
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+    background-color: pink;
+    color: white;
+    padding: 1rem 2rem;
+
+    a {
+        color: white
+    }
+
 }
 
 header {
-    background-color: antiquewhite;
+    h1 {
+        margin: 0.5rem 0;
+    }
 
+.back {
+    text-decoration: none;
 }
-footer {
-    background-color: antiquewhite;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
 }

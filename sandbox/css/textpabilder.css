@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 1rem 2rem;
+}
+
+/* Yttre grid: 2 kolumner, 2 rader */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1000px;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+}
+
+
+/* a) och c): bild och text läggs i SAMMA grid-cell */
+.grid-version {
+    display: grid;
+
+    img{
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+.text-overlay-grid {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center; /* mitt i höjdled */
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+}
+
+/* c) kortet */
+.card-overlay {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: right; /* till höger */
+    width: 40%;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(228, 240, 251);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transform: translate(-15px, 10px);
+
+    h2,
+    p {
+        margin: 3px;
+    }
+
+}
+
+/* b) och d): position */
+.position-version {
+    position: relative;
+}
+
+.text-overlay-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centrerar på riktigt */
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+}
+
+
+/* d) bild ovanpå bild */
+.container {
+    position: relative;
+    .overlay-image {
+    width: 30%;
+    position: absolute;
+    top: -7%;
+    right: 8%;
+    }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/textpabilder.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <title>Text på bilder</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="back">Tillbaka</a>
+      <h1>Text på bilder</h1>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <div class="container grid-version">
+          <img src="images/koala.image.jpg" alt="koala" />
+          <div class="text-overlay-grid"><p>Text på bilden med grid</p></div>
+        </div>
+
+        <div class="container position-version">
+          <img src="images/koala.image.jpg" alt="Koala" />
+          <div class="text-overlay-position">
+            <p>Text på bilden med position</p>
+          </div>
+        </div>
+
+        <div class="container grid-version">
+          <img src="images/koala.image.jpg" alt="koala" />
+          <div class="card-overlay">
+            <h2>Card Title</h2>
+            <p>Det här är ett kort med text ovanpå bilden</p>
+          </div>
+        </div>
+
+        <div class="container position-version">
+          <img src="images/koala.image.jpg" alt="Koala" />
+          <img
+            class="overlay-image"
+            src="images/elephant.image.webp"
+            alt="Elefant"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Filippa Wallin</p>
+    </footer>
+  </body>
+</html>
